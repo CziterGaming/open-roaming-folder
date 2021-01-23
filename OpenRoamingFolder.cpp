@@ -11,9 +11,9 @@ int main()
     const char* e = path;
     size_t a = mbsrtowcs(NULL, &e, 0, NULL);
 
-    wchar_t* buf = new wchar_t[a + 1]();
+    wchar_t* loc = new wchar_t[a + 1]();
 
-    a = mbsrtowcs(buf, &e, a + 1, NULL);
+    a = mbsrtowcs(loc, &e, a + 1, NULL);
 
-    ShellExecute(NULL, NULL, buf, NULL, NULL, SW_SHOWNORMAL);
+    ShellExecute(NULL, NULL, loc, NULL, NULL, SW_SHOWNORMAL);
 }
